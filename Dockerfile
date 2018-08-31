@@ -1,7 +1,7 @@
-FROM node:6-alpine
+FROM node:10.9.0-alpine
 
-LABEL maintainer="angristan"
-LABEL source="https://github.com/angristan/docker-hastebin"
+LABEL maintainer="TheForcer"
+LABEL source="https://github.com/TheForcer/docker-hastebin"
 
 ARG HASTEBIN_VER=master
 
@@ -13,7 +13,7 @@ RUN apk -U upgrade \
     && cd /app \
     && git checkout ${HASTEBIN_VER} \
     && npm install \
-    && npm cache clean
+    && npm cache clean --force
 
 COPY rootfs /
 
