@@ -1,4 +1,4 @@
-FROM node:10.9.0-alpine
+FROM node:10.11.0-alpine
 
 LABEL maintainer="TheForcer"
 LABEL source="https://github.com/TheForcer/docker-hastebin"
